@@ -1,9 +1,21 @@
 {
-  "name": "CrowdCall-Server",
+  "name": "crowdcall-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/handler.js",
   "license": "MIT",
+  "scripts": {
+    "start": "serverless offline --dontPrintOutput",
+    "debug":
+      "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline",
+    "deploy": "serverless deploy",
+    "production-deploy": "serverless deploy -s production -r us-east-1"
+  },
   "devDependencies": {
-    "serverless": "^1.26.1"
+    "serverless": "^1.26.1",
+    "serverless-offline": "^3.18.0",
+    "serverless-plugin-typescript": "^1.1.5"
+  },
+  "dependencies": {
+    "graphql-yoga": "*"
   }
 }
