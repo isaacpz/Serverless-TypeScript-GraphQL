@@ -4,10 +4,12 @@
   "main": "src/handler.js",
   "license": "MIT",
   "scripts": {
-    "start": "serverless offline --dontPrintOutput",
+    "start": "rm -rf .build && serverless offline --dontPrintOutput",
     "debug":
       "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline",
-    "deploy": "serverless deploy",
+    "deploy": "rm -rf .build && serverless deploy",
+    "update-schema":
+      "apollo-codegen introspect-schema src/schema/schema.graphql --output .build/schema.json && gql-gen --file .build/schema.json --template typescript --out ./src/schema/ './src/**/*.graphql'",
     "production-deploy": "serverless deploy -s production -r us-east-1"
   },
   "devDependencies": {
@@ -16,6 +18,7 @@
     "serverless-plugin-typescript": "^1.1.5"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
     "graphql-yoga": "*"
   }
 }
