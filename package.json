@@ -1,5 +1,5 @@
 {
-  "name": "crowdcall-server",
+  "name": "serverless-boilerplate",
   "version": "1.0.0",
   "main": "src/handler.js",
   "license": "MIT",
