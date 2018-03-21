@@ -1,7 +1,7 @@
 /* tslint:disable */
 
 export interface Query {
-  greet?: string | null;
+  greet: string | null;
 }
 export interface GreetQueryArgs {
   name?: string | null;
