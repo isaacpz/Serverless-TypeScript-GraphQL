@@ -26,4 +26,3 @@ This is a complete, relatively modular implementation of [GraphQL-Yoga](https://
   * [`graphql.js`](https://github.com/graphql/graphql-js)/[`graphql-tools`](https://github.com/apollographql/graphql-tools): GraphQL engine & schema helpers
   * [`graphql-playground`](https://github.com/graphcool/graphql-playground): Interactive GraphQL IDE
 * serverless (configured with [`serverless-offline`](https://github.com/dherault/serverless-offline) for local development and [`serverless-typescript`](https://github.com/graphcool/serverless-plugin-typescript) to compile)
-* [`AWS Lambda`]
